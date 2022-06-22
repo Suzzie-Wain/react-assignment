@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Fragment } from 'react';
+import ReactDOM from 'react-dom';
+import "./app.css";
+const App = () =>{
+    return(
+        <div style={{backgroundImage:"url(/public/lights.jpg)"}}> 
+        <div class="navbar">
+            <img class="logo" src={'FRTL.jpg'} height={100} width={100} />
+            <br></br>
+            <h2> FIRST RESPONDERS TEAM</h2>
+              <nav>
+                <a href="#">Home</a>   <br></br>
+                 <a href="#">About-us</a>  <br></br>
+                  <a href="#">Contact-us</a> <br></br>
+                  <a href="#">Gallery</a> <br></br>
+                  <a href="#">Feedback</a> <br></br>
+            </nav>
+            
+     <br></br>
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+        </div>
+        </div>
+    )
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        
+    
+}
+ReactDOM.render(
+    <App />,
+    document.querySelector('#root')
+)
+export default App;
